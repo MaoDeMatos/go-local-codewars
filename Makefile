@@ -9,6 +9,10 @@ install: ## Install dependencies and setup .env file
 run: ## Run tests in watch mode
 	ginkgo watch kata
 
+.PHONY: run-once
+run-once: ## Run tests once in verbose mode
+	ginkgo -v kata
+
 # Self-Documenting part
 .PHONY: help
 .DEFAULT_GOAL := help
